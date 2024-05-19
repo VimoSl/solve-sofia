@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
 
-const DOMAIN = process.env.DOMAIN + PORT;
+const DOMAIN = process.env.DOMAIN;
 
 const MAILJET_PUBLIC = process.env.MAILJET_PUBLIC;
 const MAILJET_PRIVATE = process.env.MAILJET_PRIVATE;
