@@ -56,7 +56,7 @@ app.post("/create-checkout-session", async (req, res) => {
 	res.json({ url: session.url });
 });
 
-const endpointSecret = "whsec_0f98da4a0ea63d10fc6f84a66a8d8b47e21117e6ecae25a14e3b2ee9226e6246";
+const endpointSecret = "whsec_cnW5YwTyUESFjMO7aNTNXGhXhjD6FRHC";
 
 // Use body-parser to retrieve the raw body as a buffer
 const sendEmail = async function (type, receiver, code = "") {
@@ -136,7 +136,7 @@ app.post("/webhook", bodyParser.raw({ type: "application/json" }), (request, res
 	const sig = request.headers["stripe-signature"];
 
 	let event;
-
+	console.log("test");
 	try {
 		event = stripe.webhooks.constructEvent(payload, sig, endpointSecret);
 	} catch (err) {
