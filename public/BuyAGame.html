@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Разгадай София</title>
+
+		<script src="script-buy.js" defer></script>
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<header>
+			<a href="index.html"><img src="images/logo.png" alt="Logo" class="logo" /></a>
+			<div class="nav">
+				<a href="FAQ.html">FAQ</a>
+				<a href="AboutUs.html">За нас</a>
+				<a href="Contacts.html">Контакти</a>
+				<a href="game/index.html">Започни игра</a>
+				<a href="BuyAGame.html" class="special-link">Купи игра</a>
+			</div>
+		</header>
+
+		<div class="section-buy-a-game">
+			<div class="games">
+				<h3>Изберете игра</h3>
+
+				<div class="games-holder">
+					<div class="game" data-game="borisova">
+						<img src="images/Borisova.jpg" alt="Борисова градина" />
+						<h4>Борисова градина</h4>
+						<div class="stats">
+							<div class="icon-holder"><ion-icon name="time-outline"></ion-icon></div>
+							<p>1-2 часа</p>
+							<div class="icon-holder">
+								<ion-icon name="location-outline"></ion-icon>
+							</div>
+							<p>2 км</p>
+						</div>
+					</div>
+
+					<div class="game" data-game="sofia-center">
+						<img src="images/Sofia-center.jpg" alt="Център на София" />
+						<h4>Център на София</h4>
+						<div class="stats">
+							<div class="icon-holder"><ion-icon name="time-outline"></ion-icon></div>
+							<p>2-3 часа</p>
+							<div class="icon-holder">
+								<ion-icon name="location-outline"></ion-icon>
+							</div>
+							<p>4.5 км</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="selected-game" data-game="borisova">
+				<h3 class="game-headline">Игра в Борисовата градина</h3>
+				<img src="images/Borisova.jpg" alt="Борисова градина" class="game-img" />
+				<p class="game-description">
+					Играта "Разгадай Борисовата градина" предлага един по-спокоен вариант за
+					разгадаване на загадки в сърцето на един от най-красивите и посещавани паркове в
+					София. Разстоянието, което участниците изминават по време на играта, е около 2
+					километра, което прави преживяването идеално за тези, които искат да съчетаят
+					умствена активност с лека физическа разходка. Играта е с времеви лимит от 2
+					часа, но е възможно да бъде завършена и за по-кратко време, което я прави
+					отличен избор за организиране на рожденни дни или просто за по-забавно и
+					вълнуващо прекарване на времето в парка. Участниците ще имат възможността да
+					открият скрити ъгълчета и малко известни факти за Борисовата градина, докато
+					решават интригуващи загадки и разкриват тайни на различни точки в парка.
+				</p>
+				<p>Цена: 60 лв</p>
+				<div class="buy-a-game-btn-holder">
+					<button class="btn-diff btn-easy btn-selected">Лесно</button>
+					<button class="btn-diff btn-hard">Трудно</button>
+				</div>
+				<button class="btn-buy-a-game">Купи</button>
+			</div>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>

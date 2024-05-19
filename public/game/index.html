@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bg">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Загадки</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="questions.js" defer></script>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="timer-holder hidden">
+			<p class="timer"></p>
+		</div>
+		<h1 class="title hidden"></h1>
+		<p class="base-text points"></p>
+		<p class="task base-text"></p>
+		<div class="img-holder hidden">
+			<img class="img" src="images/alphabet.png" />
+		</div>
+		<div class="input-holder hidden">
+			<input type="text" class="input" />
+			<button class="btn btn-ok">ОК</button>
+		</div>
+
+		<div class="help-holder hidden">
+			<button class="btn btn-help">Жокер</button>
+			<p class="base-text help-text"></p>
+		</div>
+
+		<div class="password-holder">
+			<p>Парола:</p>
+			<input type="text" class="pass-inp" />
+			<button class="btn btn-start">OK</button>
+		</div>
+		<!-- <button class="btn test">TEST</button> -->
+		<div class="win-holder hidden">
+			<h1>Поздравления</h1>
+			<p>
+				Вие завършихте играта с <span class="pts-end"></span> точки за
+				<span class="time-end"></span> минути.
+			</p>
+		</div>
+		<div class="lose-holder hidden">
+			<h1>Времето свърши</h1>
+			<p>Вие завършихте играта с <span class="pts-end"></span> точки.</p>
+		</div>
+	</body>
+</html>
