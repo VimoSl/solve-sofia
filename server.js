@@ -4,10 +4,11 @@ import Mailjet from "node-mailjet";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, set, child, update, push } from "firebase/database";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
 
-const stripe = new Stripe(
-	"sk_test_51OClERFhqW5VVkMXXBgnYFzA7ydHCryUw24iG8AyGLSANvKVeypsugsiwwkE4Gt0L4ScwE0IYMJaugPoXucAYVeE003YUmv9TM"
-);
+dotenv.config();
+const STRIPE_API_KEY = process.env.STRIPE_API_KEY;
+const stripe = new Stripe(STRIPE_API_KEY);
 
 const app = express();
 
@@ -15,18 +16,19 @@ app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
 
-const DOMAIN = "http://localhost:" + PORT;
+const DOMAIN = process.env.DOMAIN + PORT;
 
-const MAILJET_PUBLIC = "1ff44fdcf75525e2212d413151fd98df";
-const MAILJET_PRIVATE = "ee6d1688d49a829cdb84c28ab0cf9cba";
+const MAILJET_PUBLIC = process.env.MAILJET_PUBLIC;
+const MAILJET_PRIVATE = process.env.MAILJET_PRIVATE;
 
 const mailjet = new Mailjet({
 	apiKey: MAILJET_PUBLIC,
 	apiSecret: MAILJET_PRIVATE,
 });
 
+const FIREBASE_API_KEY = process.env.FIREBASE_API_KEY;
 const firebaseConfig = {
-	apiKey: "AIzaSyD7ryKQrIaH6Y4O1rhNSQZZIFexHCOa_n8",
+	apiKey: FIREBASE_API_KEY,
 	authDomain: "project-games-12bf5.firebaseapp.com",
 	projectId: "project-games-12bf5",
 	storageBucket: "project-games-12bf5.appspot.com",

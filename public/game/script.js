@@ -223,18 +223,3 @@ btnCheck.addEventListener("click", () => checkAnswer(inputEl.value));
 btnHelp.addEventListener("click", () => handleHelpClick());
 btnStart.addEventListener("click", handleStartGame);
 
-const test = async function () {
-	currPoints = 10;
-	qInd = 10;
-
-	const res = await fetch(`${window.location.origin}/next-question`, {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			points: currPoints,
-			qInd,
-		}),
-	});
-};
