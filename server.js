@@ -136,7 +136,7 @@ app.post("/webhook", bodyParser.raw({ type: "application/json" }), (request, res
 	const sig = request.headers["stripe-signature"];
 
 	let event;
-	console.log("test");
+	console.log("TEST", "IN A PAYMENT PROBLEM");
 	try {
 		event = stripe.webhooks.constructEvent(payload, sig, endpointSecret);
 	} catch (err) {
